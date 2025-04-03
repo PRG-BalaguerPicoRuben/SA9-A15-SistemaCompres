@@ -3,18 +3,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
 package sa9.a15.sistemacompres;
-
+import java.util.ArrayList;
 /**
  *
  * @author batoi
  */
-public class SA9A15SistemaCompres {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-    
+public class Aparadors {
+    private String nom;
+    private Marca marca;
+    private ArrayList<StockProducte> Stock;
 }
