@@ -12,16 +12,33 @@ import java.util.Random;
 public class StockProducte {
     
     private int unidades;
-    private Producte producto;
+    private final Producte producto;
 
-    public StockProducte(Producte producto) {
-        this.unidades = generarRandom();
+     public StockProducte(Producte producto, int unidades) {
+        assert producto != null : "El producte no pot ser null";
+        assert unidades >= 0 : "La quantitat no pot ser negativa";
+        
         this.producto = producto;
+        this.unidades = unidades;
     }
     
-    public static int generarRandom(){
-        Random random = new Random();
-        return random.nextInt(1,10);
+    public int getQuantitat() {
+        return unidades;
+    }
+    
+    public void decrementarQuantitat(int quantitat) {
+        assert quantitat > 0 : "La quantitat a decrementar ha de ser positiva";
+        assert this.unidades >= unidades : "No hi ha suficient estoc";
+        
+        this.unidades -= quantitat;
+    }
+    
+    public Producte getProducte() {
+        return producto;
+    }
+    
+    public boolean teEstoc() {
+        return unidades > 0;
     }
     
     
