@@ -9,5 +9,18 @@ package sa9.a15.sistemacompres;
  * @author batoi
  */
 public enum Marca {
-    PepeWear, LaCostera, FlordelTaronger;
+    PEPE_WEAR("PepeWear"),
+    LA_COSTERA("LaCostera"),
+    FLOR_DEL_TARONGER("Flor del taronger");
+    
+    private final String nom;
+    
+    private Marca(String nom) {
+        this.nom = nom;
+    }
+    
+    @Override
+    public String toString() {
+        return nom;
+    }
 }
