@@ -1,15 +1,18 @@
+
+import java.util.ArrayList;
+
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package sa9.a15.sistemacompres;
-import java.util.ArrayList;
-import java.util.*;
+
 /**
  *
  * @author batoi
  */
-public abstract class Aparadors {
+import java.util.*;
+
+public abstract class Aparador {
     protected String nom;
     protected Marca marca;
     protected List<StockProducte> estoc;
@@ -89,3 +92,4 @@ public abstract class Aparadors {
 
     public abstract boolean estaObert();
 }
+
